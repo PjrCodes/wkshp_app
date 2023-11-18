@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wkshp_app/card_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -72,10 +73,22 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () => _selectDate(context),
             child: const Text('Select date'),
           ),
-          const SizedBox(height: 20.0,),
+          const SizedBox(
+            height: 20.0,
+          ),
           ElevatedButton(
             child: const Text("Create Card"),
-            onPressed: () {},
+            onPressed: () {
+              // go to card page
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => CardPage(
+                          name: nameController.text,
+                          birthDay: selectedDate,
+                        )),
+              );
+            },
           )
         ],
       )), // The comma at the end makes everything look nicer.
