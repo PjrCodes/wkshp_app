@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
       context: context,
       initialDate: selectedDate,
       firstDate: DateTime(2000), // Actually 01/01/2000
-      lastDate: DateTime(2024),
+      lastDate: DateTime.now(),
     );
     if (picked != null && picked != selectedDate) {
       setState(() {
