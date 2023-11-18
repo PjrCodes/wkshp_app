@@ -18,6 +18,9 @@ class CardPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    var myWidth = MediaQuery.of(context).size.width - 20;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.purple.shade200,
@@ -39,23 +42,23 @@ class CardPage extends StatelessWidget {
                       'assets/images/card.png',
                       fit: BoxFit.contain,
                       alignment: Alignment.topCenter,
-                      height: 400,
-                      width: 400,
+                      height: myWidth,
+                      width: myWidth,
                     ),
-                    const Positioned(
-                      top: 300,
+                    Positioned(
+                      top: myWidth - 100,
                       left: 0,
                       child: SizedBox(
                         height: 100,
-                        width: 400,
-                        child: DecoratedBox(
+                        width: myWidth,
+                        child: const DecoratedBox(
                           decoration: BoxDecoration(
                               color: Color.fromARGB(220, 255, 192, 203)),
                         ),
                       ),
                     ),
                     Positioned(
-                      top: 300,
+                      top: myWidth - 100,
                       left: 15,
                       child: Text(
                         "Happy Birthday",
@@ -66,7 +69,7 @@ class CardPage extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                      top: 320,
+                      top: myWidth - 80,
                       left: 15,
                       child: SizedBox(
                         width: 360,
@@ -82,7 +85,7 @@ class CardPage extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                      top: 350,
+                      top: myWidth - 50,
                       left: 15,
                       child: Text(
                         'You turn ${DateTime.now().difference(birthDay).inDays ~/ 365} years old today!',
