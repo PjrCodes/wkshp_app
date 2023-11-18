@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // A simple app with a purple app bar and a centered text.
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 57, 41, 60),
+        backgroundColor: Colors.pink.shade200,
         title: const Text("Birthday Card Generator"),
       ),
       body: const Center(
